@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple"
+            android:src="@drawable/back_arrow"
+            android:importantForAccessibility="no">
+
+        </ImageButton>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopNav"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TopNav"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Definitions of Community Harm"
+                android:fontFamily="@font/gothambold"
+                android:textSize="32sp"
+                android:textColor="@color/purple"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:text="You will come across service users who have experienced a range of harms that may or may not sound like a hate incident which may make it  difficult to direct them to the right sources of support.\n\nThere is some confusion about the differences between different forms of hate  and anti-social behaviour/neighbour disputes, although in law and  practice these are clear">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:baselineAligned="false">
+
+                <Button
+                    android:id="@+id/bHateRelationships"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:textAllCaps="false"
+                    android:text="Hate Relationships"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_button">
+
+                </Button>
+                <Button
+                    android:id="@+id/bMateCrime"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:textAllCaps="false"
+                    android:text="Mate Crime"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false">
+
+                <Button
+                    android:id="@+id/bNeighbourDisputes"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:textAllCaps="false"
+                    android:text="Neighbour Disputes"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_button">
+
+                </Button>
+                <Button
+                    android:id="@+id/bHateCrime"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:textAllCaps="false"
+                    android:text="Hate Crime"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button">
+                </Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false">
+
+                <Button
+                    android:id="@+id/bHateIncident"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:textAllCaps="false"
+                    android:text="Hate Incident"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_button">
+                </Button>
+
+                <Button
+                    android:id="@+id/bAntiSocialBehaviour"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:textAllCaps="false"
+                    android:text="Anti-Social Behaviour"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button">
+
+                </Button>
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bordered_textview"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Please click a button above to see it's definition!">
+            </TextView>
+
+            <Button
+                android:id="@+id/bClose"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Close"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gothammediumt"
+                android:background="@drawable/round_y_button"
+                android:layout_marginBottom="50dp">
+
+            </Button>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
