@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple"
+            android:src="@drawable/back_arrow"
+            android:importantForAccessibility="no">
+
+        </ImageButton>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/MainSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopNav"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TopNav"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Referral Pathway"
+                android:fontFamily="@font/gothambold"
+                android:textSize="32sp"
+                android:textColor="@color/purple"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:text="This toolkit is designed to help you make decisions about where to refer people, so they get the support they need as soon as possible. It is based on research conducted by Durham and Northumbria Universities with Connected Voice Advocacy’s Hate Crime Advocacy Service. You will find a link to the research here: [insert a link to exec summary pdf]\n\nIn making the decision about whether and how to refer your clients you can either choose to just view the questions necessary to inform your referral decision OR write in the responses to the questions. If you opt for the latter, you will receive a PDF copy of your notes for your files and/or as a reference sheet for referral. The information you provide will not be stored by the app other than to send to you\n\nPlease tick which option you would prefer:">
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/bullet_point"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Just see the questions as prompts">
+
+                </TextView>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </CheckBox>
+
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/bSubmitContinue"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit and Continue"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:fontFamily="@font/gothammediumt"
+                android:background="@drawable/round_y_button"
+                android:layout_marginBottom="10dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/bContinue"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Continue Without Submitting"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:fontFamily="@font/gothammediumt"
+                android:background="@drawable/round_y_button"
+                android:layout_marginBottom="80dp">
+
+            </Button>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple"
+        android:orientation="horizontal"
+        android:layout_gravity="center|bottom"
+        android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+</RelativeLayout>
