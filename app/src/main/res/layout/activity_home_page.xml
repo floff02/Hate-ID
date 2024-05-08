@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:background="@color/purple"
         tools:ignore="UselessParent">
-
         <ImageButton
             android:id="@+id/ibBack"
             android:layout_width="50dp"
@@ -21,7 +20,6 @@
             android:background="@color/purple"
             android:src="@drawable/back_arrow"
             android:importantForAccessibility="no">
-
         </ImageButton>
     </LinearLayout>
 
@@ -38,7 +36,6 @@
             android:layout_below="@+id/TopNav"
             android:layout_margin="20dp"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,7 +44,6 @@
                 android:textSize="32sp"
                 android:textColor="@color/purple"
                 android:textStyle="bold">
-
             </TextView>
 
             <TextView
@@ -57,7 +53,6 @@
                 android:fontFamily="@font/gothammedium"
                 android:textSize="15sp"
                 android:text="You will come across service users who have experienced a range of harms that may or may not sound like a hate incident which may make it  difficult to direct them to the right sources of support.\n\nThere is some confusion about the differences between different forms of hate  and anti-social behaviour/neighbour disputes, although in law and  practice these are clear">
-
             </TextView>
 
             <LinearLayout
@@ -66,7 +61,6 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="20dp"
                 android:baselineAligned="false">
-
                 <Button
                     android:id="@+id/bHateRelationships"
                     android:layout_width="150dp"
@@ -80,8 +74,8 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/round_button">
-
                 </Button>
+
                 <Button
                     android:id="@+id/bMateCrime"
                     android:layout_width="150dp"
@@ -95,8 +89,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/round_button">
                 </Button>
-
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -104,7 +98,6 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 android:baselineAligned="false">
-
                 <Button
                     android:id="@+id/bNeighbourDisputes"
                     android:layout_width="150dp"
@@ -118,8 +111,8 @@
                     android:layout_weight="1"
                     android:layout_marginEnd="10dp"
                     android:background="@drawable/round_button">
-
                 </Button>
+
                 <Button
                     android:id="@+id/bHateCrime"
                     android:layout_width="150dp"
@@ -133,8 +126,8 @@
                     android:layout_weight="1"
                     android:background="@drawable/round_button">
                 </Button>
-
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,7 +135,6 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp"
                 android:baselineAligned="false">
-
                 <Button
                     android:id="@+id/bHateIncident"
                     android:layout_width="150dp"
@@ -170,11 +162,9 @@
                     android:textStyle="bold"
                     android:layout_weight="1"
                     android:background="@drawable/round_button">
-
                 </Button>
-
-
             </LinearLayout>
+
             <TextView
                 android:id="@+id/tvDefinition"
                 android:layout_width="match_parent"
@@ -198,7 +188,6 @@
                 android:fontFamily="@font/gothammediumt"
                 android:background="@drawable/round_y_button"
                 android:layout_marginBottom="25dp">
-
             </Button>
 
             <Button
@@ -215,12 +204,10 @@
                 android:fontFamily="@font/gothammediumt"
                 android:background="@drawable/round_y_button"
                 android:layout_marginBottom="80dp">
-
             </Button>
-
-
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -228,7 +215,6 @@
         android:orientation="horizontal"
         android:layout_gravity="center|bottom"
         android:layout_alignParentBottom="true">
-
     </LinearLayout>
 
 </RelativeLayout>

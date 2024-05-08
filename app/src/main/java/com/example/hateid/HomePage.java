@@ -2,13 +2,14 @@ package com.example.hateid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
-    Button bHateRelationships, bMateCrime, bNeighbourDisputes, bHateCrime, bHateIncident, bAntiSocialBehaviour, bClose;
+    Button bHateRelationships, bMateCrime, bNeighbourDisputes, bHateCrime, bHateIncident, bAntiSocialBehaviour, bClose, bContinue;
     TextView tvDefinition;
 
     @Override
@@ -24,6 +25,7 @@ public class HomePage extends AppCompatActivity {
         bAntiSocialBehaviour = findViewById(R.id.bAntiSocialBehaviour);
         tvDefinition = findViewById(R.id.tvDefinition);
         bClose = findViewById(R.id.bClose);
+        bContinue = findViewById(R.id.bContinue);
 
         bHateRelationships.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +67,14 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tvDefinition.setText("Please click a button above to see it's definition!");
+            }
+        });
+        bContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ReferralPathway.class);
+                startActivity(intent);
+                finish();
             }
         });
 

@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:background="@color/purple"
         tools:ignore="UselessParent">
-
         <ImageButton
             android:id="@+id/ibBack"
             android:layout_width="50dp"
@@ -21,7 +20,6 @@
             android:background="@color/purple"
             android:src="@drawable/back_arrow"
             android:importantForAccessibility="no">
-
         </ImageButton>
     </LinearLayout>
 
@@ -38,7 +36,6 @@
             android:layout_below="@+id/TopNav"
             android:layout_margin="20dp"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,9 +44,7 @@
                 android:textSize="32sp"
                 android:textColor="@color/purple"
                 android:textStyle="bold">
-
             </TextView>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,8 +52,9 @@
                 android:fontFamily="@font/gothammedium"
                 android:textSize="15sp"
                 android:text="This toolkit is designed to help you make decisions about where to refer people, so they get the support they need as soon as possible. It is based on research conducted by Durham and Northumbria Universities with Connected Voice Advocacy’s Hate Crime Advocacy Service. You will find a link to the research here: [insert a link to exec summary pdf]\n\nIn making the decision about whether and how to refer your clients you can either choose to just view the questions necessary to inform your referral decision OR write in the responses to the questions. If you opt for the latter, you will receive a PDF copy of your notes for your files and/or as a reference sheet for referral. The information you provide will not be stored by the app other than to send to you\n\nPlease tick which option you would prefer:">
-
             </TextView>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +66,6 @@
                     android:src="@drawable/bullet_point"
                     android:layout_gravity="center"
                     android:layout_marginRight="5dp">
-
                 </ImageView>
                 <TextView
                     android:layout_width="match_parent"
@@ -78,18 +73,180 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
                     android:text="Just see the questions as prompts">
-
                 </TextView>
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-
                 </CheckBox>
-
-
             </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/bullet_point"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Save your notes in relation to the questions">
+                </TextView>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. a. Name">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. b. Contact Details"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. c. Post-Code"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormPostCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. d. What Happened"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhatHappened"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. e. Who was involved?\nPerpetrator(s) and/or victim(s)"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhoInvolved"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. f. Where did it happen?"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="1. g. When did it happen?"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gothamboldt"
+                    android:textSize="30sp"
+                    android:text="Page 1/2"
+                    android:layout_marginTop="10dp">
+                </TextView>
+            </LinearLayout>
 
 
             <Button
@@ -106,7 +263,6 @@
                 android:fontFamily="@font/gothammediumt"
                 android:background="@drawable/round_y_button"
                 android:layout_marginBottom="10dp">
-
             </Button>
 
             <Button
@@ -123,12 +279,10 @@
                 android:fontFamily="@font/gothammediumt"
                 android:background="@drawable/round_y_button"
                 android:layout_marginBottom="80dp">
-
             </Button>
-
-
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -136,7 +290,6 @@
         android:orientation="horizontal"
         android:layout_gravity="center|bottom"
         android:layout_alignParentBottom="true">
-
     </LinearLayout>
 
 </RelativeLayout>
