@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HateID</string>
+    <string name="danger_risk">1. If, in your judgement, the client is in danger/at risk and or the victim of a crime encourage them to <font color="purple">RING THE POLICE</font></string>
 </resources>
