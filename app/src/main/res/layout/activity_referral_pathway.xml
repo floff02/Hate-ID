@@ -75,6 +75,7 @@
                     android:text="Just see the questions as prompts">
                 </TextView>
                 <CheckBox
+                    android:id="@+id/cbQuestions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </CheckBox>
@@ -100,6 +101,7 @@
                     android:text="Save your notes in relation to the questions">
                 </TextView>
                 <CheckBox
+                    android:id="@+id/cbSaveQuestions"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </CheckBox>
@@ -250,7 +252,7 @@
 
 
             <Button
-                android:id="@+id/bSubmitContinue"
+                android:id="@+id/bContinue"
                 android:layout_width="wrap_content"
                 android:minWidth="150dp"
                 android:textAllCaps="false"
@@ -262,24 +264,10 @@
                 android:paddingRight="25dp"
                 android:fontFamily="@font/gothammediumt"
                 android:background="@drawable/round_y_button"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="100dp">
             </Button>
 
-            <Button
-                android:id="@+id/bContinue"
-                android:layout_width="wrap_content"
-                android:minWidth="150dp"
-                android:textAllCaps="false"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Continue Without Submitting"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:fontFamily="@font/gothammediumt"
-                android:background="@drawable/round_y_button"
-                android:layout_marginBottom="80dp">
-            </Button>
+
         </LinearLayout>
     </ScrollView>
 

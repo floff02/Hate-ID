@@ -31,12 +31,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/TopNav"
-        android:layout_above="@+id/BottomNav"
         android:fillViewport="true">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/TopNav"
+            android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:orientation="vertical">
             <TextView
@@ -117,14 +115,33 @@
 
             </LinearLayout>
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Click the More Options button below if you feel there are better options instead of what was recommended"
-                app:layout_constraintBottom_toBottomOf="parent">
+                android:gravity="end"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Click the More Options button below if you feel there are better options instead of what was recommended">
+                </TextView>
+                <Button
+                    android:id="@+id/bMoreOptions"
+                    android:layout_width="wrap_content"
+                    android:minWidth="150dp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="More Options"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:fontFamily="@font/gothammediumt"
+                    android:background="@drawable/round_y_button">
+                </Button>
 
-            </TextView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

@@ -479,7 +479,7 @@
                 style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tiFormContact"
+                    android:id="@+id/tiOrgOther"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
@@ -493,7 +493,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="15sp"
-                android:text="6. Does the client thing that this happened\nbecause of: [not to practitioner: hate legislation\ncovers perceptions of the victim's identity]">
+                android:text="6. Does the client think that this happened\nbecause of: [not to practitioner: hate legislation\ncovers perceptions of the victim's identity]">
             </TextView>
 
             <LinearLayout
