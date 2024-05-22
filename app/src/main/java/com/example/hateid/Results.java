@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import java.util.Objects;
@@ -24,23 +25,33 @@ public class Results extends AppCompatActivity {
         int referral = intent.getIntExtra("Referral", 0);
 
         if(referral == 1){
-            tvResult.setText("If, in your judgement, the client has not been victimised by hate, but by a neighbourhood dispute, please see Northumbria Police guidance to give appropriate advice [hyperlink to Northumbria Police Neighbour Disputes page].");
+            tvResult.setText(R.string.Neighbourhood_Dispute_Result);
+            //tvResult.setMovementMethod(LinkMovementMethod.getInstance());
+            //+ R.string.Neighbourhood_Dispute_Result_Link
         }
         else if (referral == 2) {
-            tvResult.setText("If, in your judgement, the client has not been victimised by hate, but by anti-social behaviour, please refer them to your ASB Team. See: [hyperlink to Northumbria Police ASB page].");
+            tvResult.setText(R.string.Anti_Social_Behaviour_Result);
         }
         else if (referral == 3) {
-            tvResult.setText("If, in your judgement, the client is in danger/at risk and or the victim of a crime encourage them to RING THE POLICE.");
+            tvResult.setText(R.string.Crime_Result);
         }
         else if (referral == 4) {
-            tvResult.setText("If, in your judgement, the client is in danger/at risk and or the victim of a crime that is motivated by hate then encourage them to RING THE POLICE and REPORT A HATE CRIME.");
+            tvResult.setText(R.string.Crime_Hate_Result);
         }
         else if (referral == 5) {
-            tvResult.setText(". If, in your judgement, the client is in danger/at risk and or the victim of a non-crime incident that is motivated by hate then encourage them to RING THE POLICE and REPORT A HATE INCIDENT.\n\nIf, in your judgment, the client is the victim of a non-crime incident then please refer them to CONNECTED VOICE HATE CRIME ADVOCACY SERVICE (HCAS).");
+            tvResult.setText(R.string.Non_Crime_Incident_Result);
         }
         else if (referral == 6) {
-
+            tvResult.setText(R.string.Mate_Crime_Hate_Result);
         }
-
+        else if (referral == 7) {
+            tvResult.setText(R.string.Mate_Non_Crime_Hate_Result);
+        }
+        else if (referral == 8) {
+            tvResult.setText(R.string.Hate_Relationship_Crime_Result);
+        }
+        else if (referral == 9) {
+            tvResult.setText(R.string.Hate_Relationship_Non_crime_Result);
+        }
     }
 }

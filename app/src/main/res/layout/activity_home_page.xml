@@ -52,7 +52,9 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/gothammedium"
                 android:textSize="15sp"
-                android:text="You will come across service users who have experienced a range of harms that may or may not sound like a hate incident which may make it  difficult to direct them to the right sources of support.\n\nThere is some confusion about the differences between different forms of hate  and anti-social behaviour/neighbour disputes, although in law and  practice these are clear">
+                android:text="You will come across service users who have experienced a range of harms that may or may not sound like a hate incident which may make it  difficult to direct them to the right sources of support.\n\nThere is some confusion about the differences between different forms of hate  and anti-social behaviour/neighbour disputes, although in law and  practice these are clear"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
             <LinearLayout
@@ -173,7 +175,9 @@
                 android:background="@drawable/bordered_textview"
                 android:padding="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="Please click a button above to see it's definition!">
+                android:text="Please click a button above to see it's definition!"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
             <Button
@@ -198,6 +202,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Please Continue to the Questionnaire"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"

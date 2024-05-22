@@ -43,7 +43,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gothammedium"
                 android:textSize="15sp"
-                android:text="2. Is it a crime? [A crime is an unlawful act (or  sometimes a failure to act) and can include: physical assault,  threatening behaviour, harassment, criminal damage, vandalism, trespass,  incitement to racial hatred, etc.]">
+                android:text="2. Is it a crime? [A crime is an unlawful act (or  sometimes a failure to act) and can include: physical assault,  threatening behaviour, harassment, criminal damage, vandalism, trespass,  incitement to racial hatred, etc.]"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
 
@@ -111,7 +113,9 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="3. Do you feel Unsafe or in Danger">
+                android:text="3. Do you feel Unsafe or in Danger"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
             <LinearLayout
@@ -158,7 +162,9 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="4. a. Is this a one-off incident?">
+                android:text="4. a. Is this a one-off incident?"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
             <LinearLayout
@@ -205,7 +211,9 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="4. b. One in a series of incidents from the\nsame perpetrators?">
+                android:text="4. b. One in a series of incidents from the\nsame perpetrators?"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
             <LinearLayout
@@ -251,262 +259,27 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
-                android:textSize="15sp"
-                android:text="5. a. Have you contacted other services about this?">
-            </TextView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Yes">
-                </TextView>
-                <CheckBox
-                    android:id="@+id/cbContactedYes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="No">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbContactedNo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/gothammedium"
-                android:layout_marginTop="40dp"
-                android:textSize="15sp"
-                android:text="5. b. If so which of these organisations\n(Tick all that apply)?">
-            </TextView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Police">
-                </TextView>
-                <CheckBox
-                    android:id="@+id/cbOrgPolice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="GP/Health Practitioner">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgGP"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Social Housing">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgSocialHousing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Landlord">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgLandlord"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Council/Anti-social Behaviour Team">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgCouncil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Educational Institutions">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgEducation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Social Services/Social Workers/Care Staff etc">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgSocialServices"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:baselineAligned="false">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Stop Hate UK/Tell MAMA\nOther third-party Reporting Services">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgStopHate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/gothammedium"
-                    android:text="Other (If you selected Other, Please Specify)">
-                </TextView>
-
-                <CheckBox
-                    android:id="@+id/cbOrgOther"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </CheckBox>
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tiOrgOther"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/gothammedium"
-                android:layout_marginTop="40dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="15sp"
-                android:text="6. Does the client think that this happened\nbecause of: [not to practitioner: hate legislation\ncovers perceptions of the victim's identity]">
+                android:text="6. Does the client think that this happened\nbecause of: [not to practitioner: hate legislation\ncovers perceptions of the victim's identity]"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
             </TextView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginTop="5dp"
                 android:baselineAligned="false">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="Disability (Physical/Sensory/\nCognitive/Mental health)">
+                    android:text="Disability (Physical/Sensory/\nCognitive/Mental health)"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
                 <CheckBox
                     android:id="@+id/cbDisability"
@@ -525,7 +298,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="Religion or Faith">
+                    android:text="Religion or Faith"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
                 <CheckBox
                     android:id="@+id/cbReligion"
@@ -544,7 +319,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="Race or Ethnic Group">
+                    android:text="Race or Ethnic Group"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
                 <CheckBox
                     android:id="@+id/cbRace"
@@ -562,7 +339,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="Sexuality (Gay, Lesbian, Bisexual etc.)">
+                    android:text="Sexuality (Gay, Lesbian, Bisexual etc.)"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
                 <CheckBox
                     android:id="@+id/cbSexuality"
@@ -581,7 +360,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="Transgender">
+                    android:text="Transgender"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
                 <CheckBox
                     android:id="@+id/cbTransgender"

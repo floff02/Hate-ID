@@ -55,7 +55,10 @@
                 android:background="@drawable/bordered_textview"
                 android:padding="20dp"
                 android:fontFamily="@font/gothamboldt"
-                android:text="*The Recommended advice we would provide from the Questionnaire.*">
+                android:text="*The Recommended advice we would provide from the Questionnaire.*"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+
             </TextView>
 
             <LinearLayout
@@ -69,7 +72,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/gothammediumt"
-                    android:text="Your organisation/sector will have its guidance/protocol for dealing  with hate crime. Please refer to and follow that guidance. Some examples  are:">
+                    android:text="Your organisation/sector will have its guidance/protocol for dealing  with hate crime. Please refer to and follow that guidance. Some examples  are:"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
 
                 <TextView
@@ -77,6 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- Police"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
                     android:layout_marginTop="20dp"
                     android:fontFamily="@font/gothamboldt"
                     android:textColor="@color/purple">
@@ -87,6 +94,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- Social Housing"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/gothamboldt"
                     android:textColor="@color/purple">
@@ -97,6 +106,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- Social Work"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/gothamboldt"
                     android:textColor="@color/purple">
@@ -107,6 +118,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="- Education"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
                     android:layout_marginTop="10dp"
                     android:fontFamily="@font/gothamboldt"
                     android:textColor="@color/purple">
@@ -124,7 +137,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Click the More Options button below if you feel there are better options instead of what was recommended">
+                    android:text="Click the More Options button below if you feel there are better options instead of what was recommended"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
                 </TextView>
                 <Button
                     android:id="@+id/bMoreOptions"
