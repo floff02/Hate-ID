@@ -162,7 +162,17 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="4. a. Is this a one-off incident?"
+                android:text="4. a. Has the client reported that this is a:"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothammedium"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:text="i. A one-off incident?"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
             </TextView>
@@ -204,17 +214,20 @@
                 </CheckBox>
             </LinearLayout>
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gothammedium"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
                 android:textSize="15sp"
-                android:text="4. b. One in a series of incidents from the\nsame perpetrators?"
+                android:text="If no:"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
             </TextView>
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -225,10 +238,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="Yes">
+                    android:text="ii. One in a series of incidents\nfrom the same perpetrators?"
+                    android:baselineAligned="false"
+                    android:layout_gravity="center">
                 </TextView>
                 <CheckBox
-                    android:id="@+id/cbSeriesIncidentsYes"
+                    android:id="@+id/cbSeriesSame"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </CheckBox>
@@ -243,11 +258,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/gothammedium"
-                    android:text="No">
+                    android:text="iii. Series of incidents from\ndifferent perpetrators?"
+                    android:baselineAligned="false"
+                    android:layout_gravity="center">
                 </TextView>
 
                 <CheckBox
-                    android:id="@+id/cbSeriesIncidentsNo"
+                    android:id="@+id/cbSeriesDifferent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </CheckBox>

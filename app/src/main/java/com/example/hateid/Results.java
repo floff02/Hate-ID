@@ -26,7 +26,7 @@ public class Results extends AppCompatActivity {
 
         if(referral == 1){
             tvResult.setText(R.string.Neighbourhood_Dispute_Result);
-            //tvResult.setMovementMethod(LinkMovementMethod.getInstance());
+            tvResult.setMovementMethod(LinkMovementMethod.getInstance());
             //+ R.string.Neighbourhood_Dispute_Result_Link
         }
         else if (referral == 2) {
@@ -52,6 +52,12 @@ public class Results extends AppCompatActivity {
         }
         else if (referral == 9) {
             tvResult.setText(R.string.Hate_Relationship_Non_crime_Result);
+        }
+        else if (referral == 10) {
+            tvResult.setText(R.string.Hate_Crime_And_Hate_Relationship_Result);
+        }
+        else if (referral == 11) {
+            tvResult.setText("If, in your judgement, the client is in danger/at risk and or the victim of a non-crime incident that is motivated by hate then encourage them to RING THE POLICE and REPORT A HATE INCIDENT.\n\nIf, in your judgment, the client is the victim of a non-crime incident as well as the victim of a hate relationship then please refer them to CONNECTED VOICE HATE CRIME ADVOCACY SERVICE (HCAS).");
         }
     }
 }
