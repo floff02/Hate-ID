@@ -2,7 +2,13 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="MoreOptions">
+        <State />
+      </entry>
       <entry key="Questionnaire">
+        <State />
+      </entry>
+      <entry key="Results">
         <State />
       </entry>
       <entry key="app">

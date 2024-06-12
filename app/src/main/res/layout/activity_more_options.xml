@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoreOptions">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple"
+            android:src="@drawable/back_arrow"
+            android:importantForAccessibility="no">
+
+        </ImageButton>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/MainSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopNav"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TopNav"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More Options"
+                android:fontFamily="@font/gothambold"
+                android:textSize="32sp"
+                android:textColor="@color/purple"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Neighbourhood_Dispute_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Anti_Social_Behaviour_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Crime_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Crime_Hate_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Non_Crime_Incident_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Mate_Crime_Hate_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Mate_Non_Crime_Hate_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Hate_Relationship_Crime_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Hate_Relationship_Non_crime_Result"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp">
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple"
+        android:orientation="horizontal"
+        android:layout_gravity="center|bottom"
+        android:layout_alignParentBottom="true">
+    </LinearLayout>
+</RelativeLayout>

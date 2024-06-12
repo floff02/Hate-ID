@@ -41,9 +41,20 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Referral Pathway"
+                android:fontFamily="@font/gothambold"
+                android:textSize="32sp"
+                android:textColor="@color/purple"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tvClientCrime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/gothammedium"
                 android:textSize="15sp"
-                android:text="2. Is it a crime? [A crime is an unlawful act (or  sometimes a failure to act) and can include: physical assault,  threatening behaviour, harassment, criminal damage, vandalism, trespass,  incitement to racial hatred, etc.]"
+                android:text="@string/Client_Crime"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
             </TextView>
@@ -113,7 +124,7 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="3. Do you feel Unsafe or in Danger"
+                android:text="Does the client feel Unsafe or in Danger"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
             </TextView>
@@ -162,7 +173,7 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="4. a. Has the client reported that this is a:"
+                android:text="Has the client reported that this is a:"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
             </TextView>
@@ -247,7 +258,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="5dp"
                 android:textSize="15sp"
-                android:text="6. Does the client think that this happened\nbecause of: [not to practitioner: hate legislation\ncovers perceptions of the victim's identity]"
+                android:text="Does the client think that this happened\nbecause of a:"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
             </TextView>

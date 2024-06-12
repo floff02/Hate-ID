@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Objects;
 
 public class Results extends AppCompatActivity {
 
-    TextView tvResult;
+    TextView tvResult, GuidancePolice, GuidanceSocialHousing, GuidanceSocialWork, GuidanceEducation;
+    Button bMoreOptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,24 @@ public class Results extends AppCompatActivity {
         setContentView(R.layout.activity_results);
 
         tvResult = findViewById(R.id.tvResult);
+        bMoreOptions = findViewById(R.id.bMoreOptions);
+        GuidancePolice = findViewById(R.id.GuidancePolice);
+        GuidanceSocialHousing = findViewById(R.id.GuidanceSocialHousing);
+        GuidanceSocialWork = findViewById(R.id.GuidanceSocialWork);
+        GuidanceEducation = findViewById(R.id.GuidanceEducation);
+
+        GuidancePolice.setMovementMethod(LinkMovementMethod.getInstance());
+        GuidanceSocialHousing.setMovementMethod(LinkMovementMethod.getInstance());
+        GuidanceSocialWork.setMovementMethod(LinkMovementMethod.getInstance());
+        GuidanceEducation.setMovementMethod(LinkMovementMethod.getInstance());
+
+        bMoreOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, MoreOptions.class);
+                startActivity(intent);
+            }
+        });
 
         Intent intent = getIntent();
 

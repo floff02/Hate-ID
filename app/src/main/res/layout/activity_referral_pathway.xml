@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Referral Pathway"
+                android:text="Referral Information"
                 android:fontFamily="@font/gothambold"
                 android:textSize="32sp"
                 android:textColor="@color/purple"
@@ -523,6 +523,7 @@
                         android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
                 <TextView
+                    android:id="@+id/Page1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -549,7 +550,8 @@
                 android:paddingRight="25dp"
                 android:fontFamily="@font/gothammediumt"
                 android:background="@drawable/round_y_button"
-                android:layout_marginBottom="100dp">
+                android:layout_marginBottom="100dp"
+                android:visibility="invisible">
             </Button>
 
 
