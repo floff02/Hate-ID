@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        tools:ignore="UselessParent">
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple"
+            android:src="@drawable/back_arrow"
+            android:importantForAccessibility="no">
+        </ImageButton>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/MainSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopNav"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TopNav"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Referral Pathway"
+                android:fontFamily="@font/gothambold"
+                android:textSize="32sp"
+                android:textColor="@color/purple"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:text="This toolkit is designed to help you make decisions about where to refer people, so they get the support they need as soon as possible. It is based on research conducted by Durham and Northumbria Universities with Connected Voice Advocacy’s Hate Crime Advocacy Service. You will find a link to the research here: [insert a link to exec summary pdf]\n\nIn making the decision about whether and how to refer your clients you can either choose to just view the questions necessary to inform your referral decision OR write in the responses to the questions. If you opt for the latter, you will receive a PDF copy of your notes for your files and/or as a reference sheet for referral. The information you provide will not be stored by the app other than to send to you\n\nPlease tick which option you would prefer:"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/bullet_point_svgrepo_com"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Just see the questions as prompts"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbQuestions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/bullet_point_svgrepo_com"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp">
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Save your notes in relation to the questions"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbSaveQuestions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/PathwayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="Service User"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="Phone Number"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="Post-Code"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormPostCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="What Happened"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhatHappened"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="Who was involved?\nPerpetrator(s) and/or victim(s)"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhoInvolved"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="Where did it happen?"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothamboldt"
+                    android:text="When did it happen?"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiFormWhen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothammedium"
+                    android:layout_marginTop="40dp"
+                    android:textSize="15sp"
+                    android:text="Have you contacted other services about this?"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Yes">
+                    </TextView>
+                    <CheckBox
+                        android:id="@+id/cbContactedYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="No">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbContactedNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothammedium"
+                    android:layout_marginTop="40dp"
+                    android:textSize="15sp"
+                    android:text="If so which of these organisations\n(Tick all that apply)?"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Police"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+                    <CheckBox
+                        android:id="@+id/cbOrgPolice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="GP/Health Practitioner"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgGP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Social Housing"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgSocialHousing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Landlord"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgLandlord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Council/Anti-social Behaviour Team"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgCouncil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Educational Institutions"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgEducation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Social Services/Social Workers/Care Staff etc"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgSocialServices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Stop Hate UK/Tell MAMA\nOther third-party Reporting Services"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgStopHate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothammedium"
+                        android:text="Other (If you selected Other, Please Specify)"
+                        android:lineSpacingExtra="5dp"
+                        android:letterSpacing="0.01">
+                    </TextView>
+
+                    <CheckBox
+                        android:id="@+id/cbOrgOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </CheckBox>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tiOrgOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gothamboldt"
+                    android:textSize="30sp"
+                    android:text="Page 1/2"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:layout_marginTop="10dp">
+                </TextView>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/bContinue"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit and Continue"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:fontFamily="@font/gothammediumt"
+                android:background="@drawable/round_y_button"
+                android:layout_marginBottom="100dp">
+            </Button>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/pruplebox">
+
+        <ImageButton
+
+            android:id="@+id/imgbtn_book"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/information_circle_solid_svgrepo_com"
+            android:contentDescription="Information"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/person_svgrepo_com"
+            android:contentDescription="Refferal Form"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgbtn_book"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_ul_svgrepo_com"
+            android:contentDescription="About Us"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgbtn_list"
+            app:layout_constraintStart_toEndOf="@+id/imgbtn_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/book_open_svgrepo_com"
+            android:contentDescription="Profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        tools:ignore="UselessParent">
+
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/purple"
+            android:src="@drawable/back_arrow"
+            android:importantForAccessibility="no">
+
+        </ImageButton>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/MainSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopNav"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TopNav"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:text="2. Is it a crime? "
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Yes">
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cbCrimeYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="No">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbCrimeNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Unsure">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbCrimeUnsure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothammedium"
+                android:layout_marginTop="40dp"
+                android:textSize="15sp"
+                android:text="3. Do you feel Unsafe or in Danger"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Yes">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbDangerYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="No">
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cbDangerNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothammedium"
+                android:layout_marginTop="40dp"
+                android:textSize="15sp"
+                android:text="4. a. Has the client reported that this is a:"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="i. A one-off incident?"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01"
+                    android:baselineAligned="false"
+                    android:layout_gravity="center">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbOneOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="ii. One in a series of incidents\nfrom the same perpetrators?"
+                    android:baselineAligned="false"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbSeriesSame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="iii. Series of incidents from\ndifferent perpetrators?"
+                    android:baselineAligned="false"
+                    android:layout_gravity="center"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+
+                <CheckBox
+                    android:id="@+id/cbSeriesDifferent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothammedium"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="15sp"
+                android:text="6. Does the client think that this happened\nbecause of: [not to practitioner: hate legislation\ncovers perceptions of the victim's identity]"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:baselineAligned="false">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Disability (Physical/Sensory/\nCognitive/Mental health)"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbDisability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Religion or Faith"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbReligion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Race or Ethnic Group"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbRace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Sexuality (Gay, Lesbian, Bisexual etc.)"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbSexuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="Transgender"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbTransgender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothammedium"
+                    android:text="None"
+                    android:lineSpacingExtra="5dp"
+                    android:letterSpacing="0.01">
+                </TextView>
+                <CheckBox
+                    android:id="@+id/cbNone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/bSubmit"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Submit"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:fontFamily="@font/gothammediumt"
+                android:background="@drawable/round_y_button"
+                android:layout_marginBottom="80dp">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/pruplebox">
+
+        <ImageButton
+
+            android:id="@+id/imgbtn_book"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/information_circle_solid_svgrepo_com"
+            android:contentDescription="Information"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/person_svgrepo_com"
+            android:contentDescription="Refferal Form"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgbtn_book"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_ul_svgrepo_com"
+            android:contentDescription="About Us"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgbtn_list"
+            app:layout_constraintStart_toEndOf="@+id/imgbtn_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/book_open_svgrepo_com"
+            android:contentDescription="Profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

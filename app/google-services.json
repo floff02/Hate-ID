@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "155103971194",
+    "project_id": "hate-id-app",
+    "storage_bucket": "hate-id-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155103971194:android:5d307e40b865e2eddef8c3",
+        "android_client_info": {
+          "package_name": "com.example.hateidapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn4JJAVAmOGhNiqtinLxxCRqIHbV0_Z8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
