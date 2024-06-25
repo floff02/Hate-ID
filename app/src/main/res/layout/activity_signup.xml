@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/main"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="17"
+        android:orientation="vertical"
+        android:layout_below="@+id/TopNav"
+        android:layout_above="@id/BottomNav">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_marginTop="32dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/hate_id_logo__1_" />
+
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColorHint="#000000"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColorHint="#000000"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+        <EditText
+            android:id="@+id/sgn_retypepassword"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Re-type Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColorHint="#000000"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_createaccount"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="44dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_y_button"
+            android:text="Create Your Account"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </View>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnalreadyaccount"
+            android:layout_width="400dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/outlinepurplebox"
+            android:layout_marginBottom="10dp"
+            android:text="Already Have an Account?"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="@color/main"
+        android:layout_alignParentBottom="true"/>
+
+
+
+
+</RelativeLayout>

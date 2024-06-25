@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/fromnav"
+        android:title="Form"
+        android:icon="@drawable/list_ul_svgrepo_com"/>
+
+
+    <item android:id="@+id/Information"
+        android:title="Information"
+        android:icon="@drawable/book_open_svgrepo_com"/>
+
+
+    <item android:id="@+id/Profile"
+        android:title="Profile"
+        android:icon="@drawable/person_svgrepo_com"/>
+
+
+    <item android:id="@+id/aboutus"
+        android:title="About Us"
+        android:icon="@drawable/information_circle_solid_svgrepo_com"/>
+
+</menu>

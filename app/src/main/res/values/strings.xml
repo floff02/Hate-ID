@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">HateID</string>
     <string name="Neighbourhood_Dispute_Result">If, in your judgement, the client has not been victimised by hate, but by a neighbourhood dispute, please see <a href="https://www.northumbria.police.uk/advice/advice-and-information/asb/asb/antisocial-behaviour/disputes-with-neighbours"><font fgcolor="#ff68246D">Northumbria Police guidance</font></a> to give appropriate advice.</string>
 
@@ -28,7 +29,11 @@
 
     <string name="Education_Protocol">- <a href = "https://www.nasuwt.org.uk/advice/equalities/equalities-advice/hate-crime.html"><font color = "#68246D">Education</font></a></string>
 
+    <string name="Connect_Voice_weblink">To find more information regarding Connected voice and the work they do plase visit: <a href="https://connectedvoice.org.uk/services/advocacy"><font fgcolor="#ff68246D">https://connectedvoice.org.uk/services/advocacy</font></a></string>
+
+
     <!--    <string name="Hate_Crime_And_Hate_Relationship_Result">If, in your judgement, the client is in danger/at risk and or the victim of a crime that is motivated by hate as well as a victim of a hate relationship then encourage them to <a href = "https://www.northumbria.police.uk/advice/advice-and-information/hco/hate-crime/how-to-report-hate-crime/"><font colour = "@color/purple">CONTACT THE POLICE and REPORT A HATE CRIME.</font></a>\n\nIf, in your judgment, the client is the victim of a hate relationship [including a crime] then please refer them to <a href = "https://hcasni.com/referral-form/"><font colour = "@color/purple">CONNECTED VOICE HATE CRIME ADVOCACY SERVICE (HCAS).</font></a></string>-->
 
     <!--    <string name="Hate_Incident_And_Hate_Relationship_Result">If, in your judgement, the client is in danger/at risk and or the victim of a non-crime incident that is motivated by hate then encourage them to <a href = "https://www.northumbria.police.uk/advice/advice-and-information/hco/hate-crime/how-to-report-hate-crime/"><font colour = "@color/purple">RING THE POLICE and REPORT A HATE INCIDENT.</font></a>\n\nIf, in your judgment, the client is the victim of a non-crime incident as well as the victim of a hate relationship then please refer them to <a href = "https://hcasni.com/referral-form/"><font colour = "@color/purple">CONNECTED VOICE HATE CRIME ADVOCACY SERVICE (HCAS).</font></a></string>-->
+
 </resources>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactusActivity"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/TopNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/ibBack"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@color/purple"
+                    android:src="@drawable/back_arrow"
+                    android:importantForAccessibility="no">
+                </ImageButton>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/DuoLogos"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_below="@+id/TopNav">
+
+                <ImageView
+                    android:id="@+id/LogoNorthumbria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/university_of_northumbria_at_newcastle" />
+
+                <ImageView
+                    android:id="@+id/LogoConnectedVoice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxHeight="50dp"
+                    app:srcCompat="@drawable/durham_university4730"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/AboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_below="@+id/MainLogo">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="About Us"
+                    android:textColor="@color/main"
+                    android:layout_gravity="center"
+                    android:textSize="34sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="This application is based upon research conducted by:"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tvCatherineDonovan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="- Professor Catherine Donovan"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/tvCatherineDonovanEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="catherine.donovan@durham.ac.uk"
+                    android:textColor="#3F51B5"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvStephenMacdonald"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="- Professor Stephen Macdonald"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/tvStephanMacdonaldEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="stephen.j.macdonald@durham.ac.uk"
+                    android:textColor="#3F51B5"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvJohnClayton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="- Dr John Clayton"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/tvJohnClaytonEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="john.clayton@northumbria.ac.uk"
+                    android:textColor="#3F51B5"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tvCarolLong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="- Dr Carol Long"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/tvCarolLongEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carol.M.Long@durham.ac.uk"
+                    android:textColor="#3F51B5"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:id="@+id/LogoDurham"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/connected_voice_cmyk_with_strap_1"/>
+
+
+                <TextView
+                    android:id="@+id/tvConnectVoiceWeb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Connect_Voice_weblink"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="This application was created by:"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="- Tom Pye"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="- Aditya Solanki"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="80dp"
+                    app:srcCompat="@drawable/leeds_trinity_university" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:weightSum="10"
+        android:gravity="center"
+        android:background="@drawable/pruplebox"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <ImageButton
+            android:id="@+id/ibBook"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_open_svgrepo_com"
+            android:contentDescription="Profile"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </View>
+
+        <ImageButton
+            android:id="@+id/ibList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_ul_svgrepo_com"
+            android:contentDescription="About Us"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </View>
+
+        <ImageButton
+            android:id="@+id/ibProfile"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/person_svgrepo_com"
+            android:contentDescription="Referral Form"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+        <ImageButton
+            android:id="@+id/ibAboutUs"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/information_circle_solid_svgrepo_com"
+            android:contentDescription="Information"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

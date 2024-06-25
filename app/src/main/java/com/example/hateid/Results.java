@@ -1,25 +1,32 @@
 package com.example.hateid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.Objects;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hateidapp.R;
 
 public class Results extends AppCompatActivity {
 
     TextView tvResult, GuidancePolice, GuidanceSocialHousing, GuidanceSocialWork, GuidanceEducation;
     Button bMoreOptions;
+    ImageButton ibBack, ibList, ibAboutus, ibBook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
+
+        ibBack = findViewById(R.id.ibBack);
+        ibList = findViewById(R.id.ibList);
+        ibAboutus = findViewById(R.id.ibAboutUs);
+        ibBook = findViewById(R.id.ibBook);
 
         tvResult = findViewById(R.id.tvResult);
         bMoreOptions = findViewById(R.id.bMoreOptions);
@@ -90,5 +97,38 @@ public class Results extends AppCompatActivity {
 //            tvResult.setText(R.string.Hate_Incident_And_Hate_Relationship_Result);
 //            tvResult.setMovementMethod(LinkMovementMethod.getInstance());
 //        }
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, Questionnaire.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ibBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, HomePage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ibList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, ReferralPathway.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ibAboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, ContactusActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

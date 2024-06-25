@@ -3,8 +3,6 @@ package com.example.hateid;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,10 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hateidapp.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Objects;
@@ -25,14 +27,20 @@ public class ReferralPathway extends AppCompatActivity {
     CheckBox cbQuestions, cbSaveQuestions, cbContactedYes, cbContactedNo, cbOrgPolice, cbOrgGP, cbOrgSocialHousing, cbOrgLandlord, cbOrgCouncil, cbOrgEducation, cbOrgSocialServices, cbOrgStopHate, cbOrgOther;
     LinearLayout PathwayLayout;
     TextView Page1;
+    ImageButton ibBack, ibList, ibAboutus, ibBook;
 
-    TextInputEditText tiFormName, tiFormContact, tiFormPostCode, tiFormWhatHappened, tiFormWhoInvolved, tiFormWhere, tiFormWhen, tiOrgOther;
+    TextInputEditText tiFormName, tiFormContact, tiFormPostCode, tiFormWhatHappened, tiFormWhoInvolved, tiFormWhere, tiFormWhen, tiOrgOther, tiAdditionalInfo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_referral_pathway);
+
+        ibList = findViewById(R.id.ibList);
+        ibAboutus = findViewById(R.id.ibAboutUs);
+        ibBook = findViewById(R.id.ibBook);
+        ibBack = findViewById(R.id.ibBack);
 
         bSubmit = findViewById(R.id.bSubmit);
         bContinue = findViewById(R.id.bContinue);
@@ -58,6 +66,7 @@ public class ReferralPathway extends AppCompatActivity {
         tiOrgOther = findViewById(R.id.tiOrgOther);
         cbContactedYes = findViewById(R.id.cbContactedYes);
         cbContactedNo = findViewById(R.id.cbContactedNo);
+        tiAdditionalInfo = findViewById(R.id.tiAdditionalInfo);
         Page1 = findViewById(R.id.Page1);
 
         cbQuestions.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -126,6 +135,7 @@ public class ReferralPathway extends AppCompatActivity {
                 bSubmit.setVisibility(View.VISIBLE);
                 bContinue.setVisibility(View.INVISIBLE);
                 bSubmit.setText("Submit");
+                bContinue.setText("Continue");
             }
         });
 
@@ -137,6 +147,42 @@ public class ReferralPathway extends AppCompatActivity {
         cbContactedNo.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 cbContactedYes.setChecked(false);
+            }
+        });
+
+        ibBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReferralPathway.this, HomePage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        ibBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReferralPathway.this, HomePage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ibList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReferralPathway.this, ReferralPathway.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ibAboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReferralPathway.this, ContactusActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -154,6 +200,8 @@ public class ReferralPathway extends AppCompatActivity {
                     String WhoInvolved = Objects.requireNonNull(tiFormWhoInvolved.getText()).toString();
                     String Where = Objects.requireNonNull(tiFormWhere.getText()).toString();
                     String When = Objects.requireNonNull(tiFormWhen.getText()).toString();
+                    String AdditionalInfo = (tiAdditionalInfo.getText()).toString();
+
 
                     if (cbOrgPolice.isChecked()) {
                         if (Organisations.length() > 0) Organisations.append(", ");
@@ -195,7 +243,7 @@ public class ReferralPathway extends AppCompatActivity {
                     String FinalOrganisations = Organisations.toString();
 
 
-                    String EmailBody = "Service users name: " + ServiceUserName + "\nContact Information: " + ContactInfo + "\nPostcode: " + PostCode + "\nWhat happened: " + WhatHappened + "\nWho was involved: " + WhoInvolved + "\nWhere did this take place: " + Where + "\nWhen did this happen: " + When + "\nOther Organisations that have been Contacted: " + FinalOrganisations;
+                    String EmailBody = "Service users name: " + ServiceUserName + "\nContact Information: " + ContactInfo + "\nPostcode: " + PostCode + "\nWhat happened: " + WhatHappened + "\nWho was involved: " + WhoInvolved + "\nWhere did this take place: " + Where + "\nWhen did this happen: " + When + "\nOther Organisations that have been Contacted: " + FinalOrganisations + "\nAdditional Information: " + AdditionalInfo;
 
                     Log.d(TAG, "Email Body: " + EmailBody);
                     Intent EmailIntent = new Intent(Intent.ACTION_SENDTO);

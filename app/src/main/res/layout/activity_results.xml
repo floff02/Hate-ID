@@ -21,7 +21,6 @@
             android:background="@color/purple"
             android:src="@drawable/back_arrow"
             android:importantForAccessibility="no">
-
         </ImageButton>
     </LinearLayout>
 
@@ -71,7 +70,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/gothammediumt"
+
                     android:text="Your organisation/sector will have its guidance/protocol for dealing  with hate crime. Please refer to and follow that guidance. Some examples  are:"
                     android:lineSpacingExtra="5dp"
                     android:letterSpacing="0.01">
@@ -117,6 +116,7 @@
                     android:id="@+id/GuidanceEducation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:text="@string/Education_Protocol"
                     android:lineSpacingExtra="5dp"
                     android:letterSpacing="0.01"
@@ -160,14 +160,72 @@
         </LinearLayout>
     </ScrollView>
 
+
+
     <LinearLayout
-        android:id="@+id/BottomNav"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/purple"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:weightSum="10"
+        android:gravity="center"
+        android:background="@drawable/pruplebox"
         android:orientation="horizontal"
-        android:layout_gravity="center|bottom"
-        android:layout_alignParentBottom="true">
+        android:baselineAligned="false">
+
+        <ImageButton
+            android:id="@+id/ibBook"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_open_svgrepo_com"
+            android:contentDescription="Profile"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </View>
+
+        <ImageButton
+            android:id="@+id/ibList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_ul_svgrepo_com"
+            android:contentDescription="About Us"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </View>
+
+        <ImageButton
+            android:id="@+id/ibProfile"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/person_svgrepo_com"
+            android:contentDescription="Referral Form"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </View>
+
+        <ImageButton
+            android:id="@+id/ibAboutUs"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/information_circle_solid_svgrepo_com"
+            android:contentDescription="Information"/>
+
     </LinearLayout>
 
 </RelativeLayout>

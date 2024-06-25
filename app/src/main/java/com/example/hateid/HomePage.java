@@ -1,21 +1,29 @@
 package com.example.hateid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hateidapp.R;
 
 public class HomePage extends AppCompatActivity {
     Button bHateRelationships, bMateCrime, bNeighbourDisputes, bHateCrime, bHateIncident, bAntiSocialBehaviour, bClose, bContinue;
     TextView tvDefinition;
+    ImageButton ibBack, ibList, ibAboutus, ibBook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        ibList = findViewById(R.id.ibList);
+        ibAboutus = findViewById(R.id.ibAboutUs);
+        ibBook = findViewById(R.id.ibBook);
 
         bHateRelationships = findViewById(R.id.bHateRelationships);
         bMateCrime = findViewById(R.id.bMateCrime);
@@ -73,6 +81,32 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, ReferralPathway.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ibBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, HomePage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ibList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ReferralPathway.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ibAboutus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ContactusActivity.class);
                 startActivity(intent);
                 finish();
             }
