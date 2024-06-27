@@ -53,25 +53,19 @@ public class ContactusActivity extends AppCompatActivity {
         binding.ibAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ContactusActivity.this,ReferralPathway.class));
+                startActivity(new Intent(ContactusActivity.this,ContactusActivity.class));
             }
         });
         binding.ibBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ContactusActivity .this,ContactusActivity.class));
+                startActivity(new Intent(ContactusActivity .this,HomePage.class));
             }
         });
         binding.ibList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ContactusActivity .this,ReferralPathway.class));
-            }
-        });
-        binding.ibProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ContactusActivity .this,HomePage.class));
             }
         });
     }

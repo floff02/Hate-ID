@@ -3,6 +3,7 @@ package com.example.hateid;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -10,7 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hateidapp.Model.My_Model;
 import com.example.hateidapp.R;
 import com.example.hateidapp.databinding.ActivitySignupBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,6 +27,8 @@ public class SignupActivity extends AppCompatActivity {
 
     FirebaseFirestore firestore;
     ProgressDialog progressDialog;
+
+    String a;
 
 
 
@@ -80,7 +82,7 @@ public class SignupActivity extends AppCompatActivity {
                     binding.txtPassword.setError("Enter your password");
                 }
 
-                else if (password == retypepassword){
+                else if (!password.equals(retypepassword)){
                     binding.sgnRetypepassword.setError("The password dosent match");
 
                 }
@@ -93,23 +95,20 @@ public class SignupActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()){
-                                My_Model model = new My_Model(email,password,retypepassword);
+                                Log.i(a,"onComplete: ");
+                                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                                finish();
 
-                                String id = task.getResult().getUser().getUid();
-                                firestore.collection("user").document().set(model).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-
-                                        progressDialog.dismiss();
-                                        Toast.makeText(SignupActivity.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
-
-
-
-                                    }
-                                });
-
+                            }else {
+                                Log.i(a,"Failure: "+task.getException());
+                                Toast.makeText(SignupActivity.this, "Authentication Failed",Toast.LENGTH_SHORT).show();;
 
                             }
+
+
+
+
 
 
                         }

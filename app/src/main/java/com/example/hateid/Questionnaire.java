@@ -138,53 +138,53 @@ public class Questionnaire extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(cbCrimeNo.isChecked() && cbDangerNo.isChecked() && (cbOneOff.isChecked() || cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && !
-                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked())){
+                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && (cbCloseYes.isChecked() || cbCloseNo.isChecked())){
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Neighbourhood Referral Code
                     intent.putExtra("Referral", 1);
                     startActivity(intent);
                 }
                 else if (cbCrimeNo.isChecked() && cbDangerYes.isChecked() && (cbOneOff.isChecked() || cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && !
-                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked())) {
+                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Anti-Social Behaviour Referral Code
                     intent.putExtra("Referral", 2);
                     startActivity(intent);
                 }
                 else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbOneOff.isChecked() || cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && !
-                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked())) {
+                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Crime Referral Code
                     intent.putExtra("Referral", 3);
                     startActivity(intent);
                 }
-                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && cbOneOff.isChecked() &&
-                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked())) {
+                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbOneOff.isChecked() || cbSeriesDifferent.isChecked()) &&
+                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Hate Crime Referral Code
                     intent.putExtra("Referral", 4);
                     startActivity(intent);
                 }
-                else if (cbCrimeNo.isChecked() && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && cbOneOff.isChecked() &&
-                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked())) {
+                else if (cbCrimeNo.isChecked() && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbOneOff.isChecked() || cbSeriesDifferent.isChecked()) &&
+                        (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Hate Incident Referral Code
                     intent.putExtra("Referral", 5);
                     startActivity(intent);
                 }
-                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked()) {
+                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked() && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Mate Crime (Crime) Referral Code
                     intent.putExtra("Referral", 6);
                     startActivity(intent);
                 }
-                else if (cbCrimeNo.isChecked() && cbDangerYes.isChecked() && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked()) {
+                else if (cbCrimeNo.isChecked() && cbDangerYes.isChecked() && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked() && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Mate Crime (Non-Crime) Referral Code
                     intent.putExtra("Referral", 7);
                     startActivity(intent);
                 }
-                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) &&
+                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && cbSeriesSame.isChecked() &&
                         (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && cbCloseYes.isChecked()) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
                     //Hate Relationship (Crime) Referral Code

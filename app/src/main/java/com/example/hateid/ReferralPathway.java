@@ -92,6 +92,7 @@ public class ReferralPathway extends AppCompatActivity {
                 tiOrgOther.setVisibility(View.INVISIBLE);
                 cbContactedYes.setVisibility(View.INVISIBLE);
                 cbContactedNo.setVisibility(View.INVISIBLE);
+                tiAdditionalInfo.setVisibility(View.INVISIBLE);
                 Page1.setVisibility(View.VISIBLE);
                 bSubmit.setVisibility(View.INVISIBLE);
                 bContinue.setVisibility(View.VISIBLE);
@@ -131,6 +132,7 @@ public class ReferralPathway extends AppCompatActivity {
                 tiOrgOther.setVisibility(View.VISIBLE);
                 cbContactedYes.setVisibility(View.VISIBLE);
                 cbContactedNo.setVisibility(View.VISIBLE);
+                tiAdditionalInfo.setVisibility(View.VISIBLE);
                 Page1.setVisibility(View.VISIBLE);
                 bSubmit.setVisibility(View.VISIBLE);
                 bContinue.setVisibility(View.INVISIBLE);

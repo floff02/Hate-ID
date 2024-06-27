@@ -253,19 +253,6 @@
 
         </View>
 
-        <ImageButton
-            android:id="@+id/ibProfile"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/person_svgrepo_com"
-            android:contentDescription="Referral Form"/>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </View>
 
         <ImageButton
             android:id="@+id/ibAboutUs"
