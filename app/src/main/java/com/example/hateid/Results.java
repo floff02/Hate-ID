@@ -16,7 +16,7 @@ public class Results extends AppCompatActivity {
 
     TextView tvResult, GuidancePolice, GuidanceSocialHousing, GuidanceSocialWork, GuidanceEducation;
     Button bMoreOptions;
-    ImageButton ibBack, ibList, ibAboutus, ibBook;
+    ImageButton ibBack, ibHomePage, ibDefinitions, ibForm, ibAboutUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,10 @@ public class Results extends AppCompatActivity {
         setContentView(R.layout.activity_results);
 
         ibBack = findViewById(R.id.ibBack);
-        ibList = findViewById(R.id.ibList);
-        ibAboutus = findViewById(R.id.ibAboutUs);
-        ibBook = findViewById(R.id.ibBook);
+        ibHomePage = findViewById(R.id.ibHomePage);
+        ibDefinitions = findViewById(R.id.ibDefinitions);
+        ibForm = findViewById(R.id.ibForm);
+        ibAboutUs = findViewById(R.id.ibAboutUs);
 
         tvResult = findViewById(R.id.tvResult);
         bMoreOptions = findViewById(R.id.bMoreOptions);
@@ -100,34 +101,37 @@ public class Results extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Results.this, Questionnaire.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        ibBook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Results.this, HomePage.class);
-                startActivity(intent);
                 finish();
             }
         });
 
-        ibList.setOnClickListener(new View.OnClickListener() {
+        ibHomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, DescriptionPage.class);
+                startActivity(intent);
+            }
+        });
+        ibDefinitions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Results.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
+        ibForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Results.this, ReferralPathway.class);
                 startActivity(intent);
-                finish();
             }
         });
-        ibAboutus.setOnClickListener(new View.OnClickListener() {
+        ibAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Results.this, ContactusActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

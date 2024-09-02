@@ -18,15 +18,16 @@ public class Questionnaire extends AppCompatActivity {
     Button bSubmit;
     CheckBox cbCrimeYes, cbCrimeNo, cbCrimeUnsure, cbDangerYes, cbDangerNo, cbOneOff, cbSeriesSame, cbSeriesDifferent, cbCloseYes, cbCloseNo, cbDisability, cbReligion, cbRace, cbSexuality, cbTransgender, cbNone;
     TextView tvClientCrime;
-    ImageButton ibBack, ibList, ibAboutus, ibBook;
+    ImageButton ibBack, ibHomePage, ibDefinitions, ibForm, ibAboutUs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questionnaire);
 
-        ibList = findViewById(R.id.ibList);
-        ibAboutus = findViewById(R.id.ibAboutUs);
-        ibBook = findViewById(R.id.ibBook);
+        ibHomePage = findViewById(R.id.ibHomePage);
+        ibDefinitions = findViewById(R.id.ibDefinitions);
+        ibForm = findViewById(R.id.ibForm);
+        ibAboutUs = findViewById(R.id.ibAboutUs);
         ibBack = findViewById(R.id.ibBack);
 
         bSubmit = findViewById(R.id.bSubmit);
@@ -104,11 +105,13 @@ public class Questionnaire extends AppCompatActivity {
         cbSeriesSame.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 cbOneOff.setChecked(false);
+                cbSeriesDifferent.setChecked(false);
             }
         });
         cbSeriesDifferent.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 cbOneOff.setChecked(false);
+                cbSeriesSame.setChecked(false);
             }
         });
 
@@ -151,6 +154,18 @@ public class Questionnaire extends AppCompatActivity {
                     intent.putExtra("Referral", 2);
                     startActivity(intent);
                 }
+                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked() && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
+                    Intent intent = new Intent(Questionnaire.this, Results.class);
+                    //Mate Crime (Crime) Referral Code
+                    intent.putExtra("Referral", 6);
+                    startActivity(intent);
+                }
+                else if (cbCrimeNo.isChecked() && cbDangerYes.isChecked() && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked() && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
+                    Intent intent = new Intent(Questionnaire.this, Results.class);
+                    //Mate Crime (Non-Crime) Referral Code
+                    intent.putExtra("Referral", 7);
+                    startActivity(intent);
+                }
                 else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbOneOff.isChecked() || cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && !
                         (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
@@ -172,18 +187,7 @@ public class Questionnaire extends AppCompatActivity {
                     intent.putExtra("Referral", 5);
                     startActivity(intent);
                 }
-                else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked() && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
-                    Intent intent = new Intent(Questionnaire.this, Results.class);
-                    //Mate Crime (Crime) Referral Code
-                    intent.putExtra("Referral", 6);
-                    startActivity(intent);
-                }
-                else if (cbCrimeNo.isChecked() && cbDangerYes.isChecked() && (cbSeriesSame.isChecked() || cbSeriesDifferent.isChecked()) && cbDisability.isChecked() && (cbCloseYes.isChecked() || cbCloseNo.isChecked())) {
-                    Intent intent = new Intent(Questionnaire.this, Results.class);
-                    //Mate Crime (Non-Crime) Referral Code
-                    intent.putExtra("Referral", 7);
-                    startActivity(intent);
-                }
+
                 else if ((cbCrimeYes.isChecked() || cbCrimeUnsure.isChecked()) && (cbDangerYes.isChecked() || cbDangerNo.isChecked()) && cbSeriesSame.isChecked() &&
                         (cbDisability.isChecked() || cbReligion.isChecked() || cbRace.isChecked() || cbSexuality.isChecked() || cbTransgender.isChecked()) && cbCloseYes.isChecked()) {
                     Intent intent = new Intent(Questionnaire.this, Results.class);
@@ -224,35 +228,37 @@ public class Questionnaire extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Questionnaire.this, ReferralPathway.class);
-                startActivity(intent);
                 finish();
             }
         });
 
-        ibBook.setOnClickListener(new View.OnClickListener() {
+        ibHomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Questionnaire.this, DescriptionPage.class);
+                startActivity(intent);
+            }
+        });
+        ibDefinitions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Questionnaire.this, HomePage.class);
                 startActivity(intent);
-                finish();
             }
         });
 
-        ibList.setOnClickListener(new View.OnClickListener() {
+        ibForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Questionnaire.this, ReferralPathway.class);
                 startActivity(intent);
-                finish();
             }
         });
-        ibAboutus.setOnClickListener(new View.OnClickListener() {
+        ibAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Questionnaire.this, ContactusActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

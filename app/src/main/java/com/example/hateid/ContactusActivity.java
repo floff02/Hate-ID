@@ -17,7 +17,7 @@ public class ContactusActivity extends AppCompatActivity {
 
     ActivityContactusBinding binding;
     TextView tvConnectVoiceWeb, tvCarolLongEmail, tvJohnClaytonEmail, tvStephanMacdonaldEmail, tvCatherineDonovanEmail;
-    ImageButton ibBack;
+    ImageButton ibBack, ibHomePage, ibDefinitions, ibForm, ibAboutUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,11 @@ public class ContactusActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ibBack = findViewById(R.id.ibBack);
+        ibBack = findViewById(R.id.ibBack);
+        ibHomePage = findViewById(R.id.ibHomePage);
+        ibDefinitions = findViewById(R.id.ibDefinitions);
+        ibForm = findViewById(R.id.ibForm);
+        ibAboutUs = findViewById(R.id.ibAboutUs);
 
         tvCarolLongEmail = findViewById(R.id.tvCarolLongEmail);
         tvJohnClaytonEmail = findViewById(R.id.tvJohnClaytonEmail);
@@ -44,28 +49,37 @@ public class ContactusActivity extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ContactusActivity.this, HomePage.class);
-                startActivity(intent);
                 finish();
             }
         });
 
-        binding.ibAboutUs.setOnClickListener(new View.OnClickListener() {
+        ibHomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ContactusActivity.this,ContactusActivity.class));
+                Intent intent = new Intent(ContactusActivity.this, DescriptionPage.class);
+                startActivity(intent);
             }
         });
-        binding.ibBook.setOnClickListener(new View.OnClickListener() {
+        ibDefinitions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ContactusActivity .this,HomePage.class));
+                Intent intent = new Intent(ContactusActivity.this, HomePage.class);
+                startActivity(intent);
             }
         });
-        binding.ibList.setOnClickListener(new View.OnClickListener() {
+
+        ibForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ContactusActivity .this,ReferralPathway.class));
+                Intent intent = new Intent(ContactusActivity.this, ReferralPathway.class);
+                startActivity(intent);
+            }
+        });
+        ibAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ContactusActivity.this, ContactusActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,12 +23,11 @@ import java.util.Objects;
 
 public class ReferralPathway extends AppCompatActivity {
     Button bSubmit, bContinue;
-    CheckBox cbQuestions, cbSaveQuestions, cbContactedYes, cbContactedNo, cbOrgPolice, cbOrgGP, cbOrgSocialHousing, cbOrgLandlord, cbOrgCouncil, cbOrgEducation, cbOrgSocialServices, cbOrgStopHate, cbOrgOther;
+    CheckBox cbConsent, cbChildrenPre, cbChildrenPrimary, cbChildrenSecondary, cbChildrenAdult, cbChildrenNon, cbContactedYes, cbContactedNo, cbOrgPolice, cbOrgGP, cbOrgSocialHousing, cbOrgLandlord, cbOrgCouncil, cbOrgEducation, cbOrgSocialServices, cbOrgStopHate, cbOrgOther;
     LinearLayout PathwayLayout;
-    TextView Page1;
-    ImageButton ibBack, ibList, ibAboutus, ibBook;
+    ImageButton ibBack, ibHomePage, ibDefinitions, ibForm, ibAboutUs;
 
-    TextInputEditText tiFormName, tiFormContact, tiFormPostCode, tiFormWhatHappened, tiFormWhoInvolved, tiFormWhere, tiFormWhen, tiOrgOther, tiAdditionalInfo;
+    TextInputEditText tiFormName, tiFormWhatHappened, tiFormWhoInvolved, tiFormWhere, tiFormWhen, tiOrgOther, tiAdditionalInfo;
 
 
     @Override
@@ -37,23 +35,26 @@ public class ReferralPathway extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_referral_pathway);
 
-        ibList = findViewById(R.id.ibList);
-        ibAboutus = findViewById(R.id.ibAboutUs);
-        ibBook = findViewById(R.id.ibBook);
+        ibHomePage = findViewById(R.id.ibHomePage);
+        ibDefinitions = findViewById(R.id.ibDefinitions);
+        ibForm = findViewById(R.id.ibForm);
+        ibAboutUs = findViewById(R.id.ibAboutUs);
         ibBack = findViewById(R.id.ibBack);
 
         bSubmit = findViewById(R.id.bSubmit);
         bContinue = findViewById(R.id.bContinue);
-        cbQuestions = findViewById(R.id.cbQuestions);
-        cbSaveQuestions = findViewById(R.id.cbSaveQuestions);
-        tiFormName = findViewById(R.id.tiFormName);
-        tiFormContact = findViewById(R.id.tiFormContact);
-        tiFormPostCode = findViewById(R.id.tiFormPostCode);
+        cbConsent = findViewById(R.id.cbConsent);
+        tiFormName=findViewById(R.id.tiFormName);
         tiFormWhatHappened = findViewById(R.id.tiFormWhatHappened);
         tiFormWhoInvolved = findViewById(R.id.tiFormWhoInvolved);
         tiFormWhere = findViewById(R.id.tiFormWhere);
         tiFormWhen = findViewById(R.id.tiFormWhen);
         PathwayLayout = findViewById(R.id.PathwayLayout);
+        cbChildrenPre = findViewById(R.id.cbChildrenPre);
+        cbChildrenPrimary = findViewById(R.id.cbChildrenPrimary);
+        cbChildrenSecondary = findViewById(R.id.cbChildrenSecondary);
+        cbChildrenAdult = findViewById(R.id.cbChildrenAdult);
+        cbChildrenNon = findViewById(R.id.cbChildrenNon);
         cbOrgPolice = findViewById(R.id.cbOrgPolice);
         cbOrgGP = findViewById(R.id.cbOrgGP);
         cbOrgSocialHousing = findViewById(R.id.cbOrgSocialHousing);
@@ -67,79 +68,18 @@ public class ReferralPathway extends AppCompatActivity {
         cbContactedYes = findViewById(R.id.cbContactedYes);
         cbContactedNo = findViewById(R.id.cbContactedNo);
         tiAdditionalInfo = findViewById(R.id.tiAdditionalInfo);
-        Page1 = findViewById(R.id.Page1);
 
-        cbQuestions.setOnCheckedChangeListener((buttonView, isChecked) -> {
+        cbConsent.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked){
-                cbSaveQuestions.setChecked(false);
-                tiFormName.setVisibility(View.INVISIBLE);
-                tiFormContact.setVisibility(View.INVISIBLE);
-                tiFormPostCode.setVisibility(View.INVISIBLE);
-                tiFormWhatHappened.setVisibility(View.INVISIBLE);
-                tiFormWhoInvolved.setVisibility(View.INVISIBLE);
-                tiFormWhere.setVisibility(View.INVISIBLE);
-                tiFormWhen.setVisibility(View.INVISIBLE);
-                PathwayLayout.setVisibility(View.VISIBLE);
-                cbOrgPolice.setVisibility(View.INVISIBLE);
-                cbOrgGP.setVisibility(View.INVISIBLE);
-                cbOrgSocialHousing.setVisibility(View.INVISIBLE);
-                cbOrgLandlord.setVisibility(View.INVISIBLE);
-                cbOrgCouncil.setVisibility(View.INVISIBLE);
-                cbOrgEducation.setVisibility(View.INVISIBLE);
-                cbOrgSocialServices.setVisibility(View.INVISIBLE);
-                cbOrgStopHate.setVisibility(View.INVISIBLE);
-                cbOrgOther.setVisibility(View.INVISIBLE);
-                tiOrgOther.setVisibility(View.INVISIBLE);
-                cbContactedYes.setVisibility(View.INVISIBLE);
-                cbContactedNo.setVisibility(View.INVISIBLE);
-                tiAdditionalInfo.setVisibility(View.INVISIBLE);
-                Page1.setVisibility(View.VISIBLE);
-                bSubmit.setVisibility(View.INVISIBLE);
-                bContinue.setVisibility(View.VISIBLE);
-                bContinue.setText("Continue without Submitting");
-
-                bContinue.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(ReferralPathway.this, Questionnaire.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-            }
-        });
-
-        cbSaveQuestions.setOnCheckedChangeListener((buttonView, isChecked) ->{
-            if (isChecked){
-                cbQuestions.setChecked(false);
-                tiFormName.setVisibility(View.VISIBLE);
-                tiFormContact.setVisibility(View.VISIBLE);
-                tiFormPostCode.setVisibility(View.VISIBLE);
-                tiFormWhatHappened.setVisibility(View.VISIBLE);
-                tiFormWhoInvolved.setVisibility(View.VISIBLE);
-                tiFormWhere.setVisibility(View.VISIBLE);
-                tiFormWhen.setVisibility(View.VISIBLE);
-                PathwayLayout.setVisibility(View.VISIBLE);
-                cbOrgPolice.setVisibility(View.VISIBLE);
-                cbOrgGP.setVisibility(View.VISIBLE);
-                cbOrgSocialHousing.setVisibility(View.VISIBLE);
-                cbOrgLandlord.setVisibility(View.VISIBLE);
-                cbOrgCouncil.setVisibility(View.VISIBLE);
-                cbOrgEducation.setVisibility(View.VISIBLE);
-                cbOrgSocialServices.setVisibility(View.VISIBLE);
-                cbOrgStopHate.setVisibility(View.VISIBLE);
-                cbOrgOther.setVisibility(View.VISIBLE);
-                tiOrgOther.setVisibility(View.VISIBLE);
-                cbContactedYes.setVisibility(View.VISIBLE);
-                cbContactedNo.setVisibility(View.VISIBLE);
-                tiAdditionalInfo.setVisibility(View.VISIBLE);
-                Page1.setVisibility(View.VISIBLE);
                 bSubmit.setVisibility(View.VISIBLE);
                 bContinue.setVisibility(View.INVISIBLE);
-                bSubmit.setText("Submit");
-                bContinue.setText("Continue");
+            }
+            else {
+                bSubmit.setVisibility(View.INVISIBLE);
+                bContinue.setVisibility(View.VISIBLE);
             }
         });
+
 
         cbContactedYes.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
@@ -155,36 +95,37 @@ public class ReferralPathway extends AppCompatActivity {
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ReferralPathway.this, HomePage.class);
-                startActivity(intent);
                 finish();
             }
         });
 
-
-        ibBook.setOnClickListener(new View.OnClickListener() {
+        ibHomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReferralPathway.this, DescriptionPage.class);
+                startActivity(intent);
+            }
+        });
+        ibDefinitions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReferralPathway.this, HomePage.class);
                 startActivity(intent);
-                finish();
             }
         });
 
-        ibList.setOnClickListener(new View.OnClickListener() {
+        ibForm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReferralPathway.this, ReferralPathway.class);
                 startActivity(intent);
-                finish();
             }
         });
-        ibAboutus.setOnClickListener(new View.OnClickListener() {
+        ibAboutUs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ReferralPathway.this, ContactusActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -192,17 +133,38 @@ public class ReferralPathway extends AppCompatActivity {
         bSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (cbSaveQuestions.isChecked()) {
-                    bContinue.setVisibility(View.INVISIBLE);
+                if (cbConsent.isChecked()) {
+                    StringBuilder Children = new StringBuilder();
                     StringBuilder Organisations = new StringBuilder();
                     String ServiceUserName = Objects.requireNonNull(tiFormName.getText()).toString();
-                    String ContactInfo = Objects.requireNonNull(tiFormContact.getText()).toString();
-                    String PostCode = Objects.requireNonNull(tiFormPostCode.getText()).toString();
                     String WhatHappened = Objects.requireNonNull(tiFormWhatHappened.getText()).toString();
                     String WhoInvolved = Objects.requireNonNull(tiFormWhoInvolved.getText()).toString();
                     String Where = Objects.requireNonNull(tiFormWhere.getText()).toString();
                     String When = Objects.requireNonNull(tiFormWhen.getText()).toString();
                     String AdditionalInfo = (tiAdditionalInfo.getText()).toString();
+
+
+                    if (cbChildrenPre.isChecked()) {
+                        if (Children.length() > 0) Children.append(", ");
+                        Children.append("Pre-school age children");
+                    }
+                    if (cbChildrenPrimary.isChecked()) {
+                        if (Children.length() > 0) Children.append(", ");
+                        Children.append("Primary school age children");
+                    }
+                    if (cbChildrenSecondary.isChecked()) {
+                        if (Children.length() > 0) Children.append(", ");
+                        Children.append("Secondary school age children");
+                    }
+                    if (cbChildrenAdult.isChecked()) {
+                        if (Children.length() > 0) Children.append(", ");
+                        Children.append("Dependent adult children living at home");
+                    }
+                    if (cbChildrenNon.isChecked()) {
+                        if (Children.length() > 0) Children.append(", ");
+                        Children.append("No Children");
+                    }
+                    String FinalChildren = Children.toString();
 
 
                     if (cbOrgPolice.isChecked()) {
@@ -245,7 +207,7 @@ public class ReferralPathway extends AppCompatActivity {
                     String FinalOrganisations = Organisations.toString();
 
 
-                    String EmailBody = "Service users name: " + ServiceUserName + "\nContact Information: " + ContactInfo + "\nPostcode: " + PostCode + "\nWhat happened: " + WhatHappened + "\nWho was involved: " + WhoInvolved + "\nWhere did this take place: " + Where + "\nWhen did this happen: " + When + "\nOther Organisations that have been Contacted: " + FinalOrganisations + "\nAdditional Information: " + AdditionalInfo;
+                    String EmailBody = "Service users name: " + ServiceUserName + "\nWhat happened: " + WhatHappened + "\nWho was involved: " + WhoInvolved + "\nWhere did this take place: " + Where + "\nWhen did this happen: " + When + "\nChildren impacted:" + FinalChildren + "\nOther Organisations that have been Contacted: "  + FinalOrganisations + "\nAdditional Information: " + AdditionalInfo;
 
                     Log.d(TAG, "Email Body: " + EmailBody);
                     Intent EmailIntent = new Intent(Intent.ACTION_SENDTO);
@@ -265,13 +227,20 @@ public class ReferralPathway extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent = new Intent(ReferralPathway.this, Questionnaire.class);
                             startActivity(intent);
-                            finish();
                         }
                     });
                 }
                 else {
                     Toast.makeText(ReferralPathway.this, "Please check one of the options above before continuing", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        bContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ReferralPathway.this, Questionnaire.class);
+                startActivity(intent);
             }
         });
     }

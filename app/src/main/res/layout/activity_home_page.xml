@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:noHistory="true"
     tools:context=".HomePage"
     android:maxWidth="450dp">
 
@@ -16,9 +17,12 @@
         tools:ignore="UselessParent">
         <ImageButton
             android:id="@+id/ibBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/purple"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
             android:src="@drawable/back_arrow"
             android:importantForAccessibility="no">
         </ImageButton>
@@ -40,7 +44,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Definitions of Community Harm"
+                android:text="Step 1: DEFINITIONS"
                 android:fontFamily="@font/gothambold"
                 android:textSize="32sp"
                 android:textColor="@color/purple"
@@ -53,7 +57,22 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/gothammedium"
                 android:textSize="15sp"
-                android:text="You will come across service users who have experienced a range of harms that may or may not sound like a hate incident which may make it  difficult to direct them to the right sources of support.\n\nThere is some confusion about the differences between different forms of hate  and anti-social behaviour/neighbour disputes, although in law and  practice these are clear"
+                android:text="Your client might be victimised by a range of harms by people in their community. On this page you can find a brief summary of the key harms that this HATE-ID app can help you make referrals for."
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bordered_textview"
+                android:padding="20dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="15sp"
+                android:text="Please click a button below to see it's definition!"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01">
 
@@ -68,10 +87,48 @@
                 android:layout_marginTop="20dp"
                 android:baselineAligned="false">
                 <Button
-                    android:id="@+id/bHateRelationships"
+                    android:id="@+id/bHateCrime"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:maxWidth="150dp"
+                    android:textAllCaps="false"
+                    android:text="Hate\nCrime"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_button">
+                </Button>
+
+                <Button
+                    android:id="@+id/bHateIncident"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:maxWidth="150dp"
+                    android:textAllCaps="false"
+                    android:text="Hate\nIncident"
+                    android:fontFamily="@font/gothambookt"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_button">
+                </Button>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false">
+                <Button
+                    android:id="@+id/bHateRelationships"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:textAllCaps="false"
                     android:text="Hate\nRelationships"
                     android:fontFamily="@font/gothambookt"
@@ -85,9 +142,8 @@
 
                 <Button
                     android:id="@+id/bMateCrime"
-                    android:layout_width="0dp"
+                    android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:maxWidth="150dp"
                     android:textAllCaps="false"
                     android:text="Mate\nCrime"
                     android:fontFamily="@font/gothambookt"
@@ -122,43 +178,6 @@
                 </Button>
 
                 <Button
-                    android:id="@+id/bHateCrime"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:textAllCaps="false"
-                    android:text="Hate\nCrime"
-                    android:fontFamily="@font/gothambookt"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:background="@drawable/round_button">
-                </Button>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:baselineAligned="false">
-                <Button
-                    android:id="@+id/bHateIncident"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:textAllCaps="false"
-                    android:text="Hate\nIncident"
-                    android:fontFamily="@font/gothambookt"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/round_button">
-                </Button>
-
-                <Button
                     android:id="@+id/bAntiSocialBehaviour"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
@@ -173,20 +192,6 @@
                 </Button>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvDefinition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bordered_textview"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp"
-                android:textSize="15sp"
-                android:text="Please click a button above to see it's definition!"
-                android:lineSpacingExtra="5dp"
-                android:letterSpacing="0.01">
-
-            </TextView>
 
             <Button
                 android:id="@+id/bClose"
@@ -209,7 +214,7 @@
                 android:textAllCaps="false"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Please Continue to the Questionnaire"
+                android:text="STEP 2: REFERAL INFORMATION"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01"
                 android:layout_marginTop="10dp"
@@ -224,6 +229,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/BottomNav"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
@@ -234,33 +240,43 @@
         android:orientation="horizontal"
         android:baselineAligned="false">
 
+
         <ImageButton
-            android:id="@+id/ibBook"
+            android:id="@+id/ibHomePage"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/book_open_svgrepo_com"
-            android:contentDescription="Profile"/>
+            android:background="@drawable/home_page"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-
         </View>
 
-        <ImageButton
-            android:id="@+id/ibList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/list_ul_svgrepo_com"
-            android:contentDescription="About Us"/>
 
+        <ImageButton
+            android:id="@+id/ibDefinitions"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_open_svgrepo_com"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
+        </View>
 
+
+        <ImageButton
+            android:id="@+id/ibForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_ul_svgrepo_com"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
         </View>
 
 
@@ -270,8 +286,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
-            android:background="@drawable/information_circle_solid_svgrepo_com"
-            android:contentDescription="Information"/>
+            android:background="@drawable/information_circle_solid_svgrepo_com"/>
 
     </LinearLayout>
 

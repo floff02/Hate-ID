@@ -15,12 +15,14 @@
 
         <ImageButton
             android:id="@+id/ibBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/purple"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
             android:src="@drawable/back_arrow"
             android:importantForAccessibility="no">
-
         </ImageButton>
     </LinearLayout>
 
@@ -168,6 +170,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/BottomNav"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
@@ -178,33 +181,43 @@
         android:orientation="horizontal"
         android:baselineAligned="false">
 
+
         <ImageButton
-            android:id="@+id/ibBook"
+            android:id="@+id/ibHomePage"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/book_open_svgrepo_com"
-            android:contentDescription="Profile"/>
+            android:background="@drawable/home_page"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-
         </View>
 
-        <ImageButton
-            android:id="@+id/ibList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/list_ul_svgrepo_com"
-            android:contentDescription="About Us"/>
 
+        <ImageButton
+            android:id="@+id/ibDefinitions"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_open_svgrepo_com"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
+        </View>
 
+
+        <ImageButton
+            android:id="@+id/ibForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_ul_svgrepo_com"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
         </View>
 
 
@@ -214,8 +227,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
-            android:background="@drawable/information_circle_solid_svgrepo_com"
-            android:contentDescription="Information"/>
+            android:background="@drawable/information_circle_solid_svgrepo_com"/>
 
     </LinearLayout>
 

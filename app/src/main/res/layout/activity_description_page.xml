@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <LinearLayout
+        android:id="@+id/TopNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
+        tools:ignore="UselessParent">
+        <ImageButton
+            android:id="@+id/ibBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back_arrow"
+            android:importantForAccessibility="no">
+        </ImageButton>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/MainSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TopNav"
+        android:layout_above="@id/BottomNav"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hate-ID"
+                android:fontFamily="@font/gothambold"
+                android:textSize="32sp"
+                android:textColor="@color/purple"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:text="There are a range of harms your clients might report to you and seek support for: hate crime, hate incidents, hate relationships, mate crime, neighbourhood disputes and anti-social behaviour.\n\nThis HATE-ID App is designed for practitioners to help you make decisions about where to refer people when they have been harmed in their communities. It is based on research conducted by Durham and Northumbria Universities with Connected Voice Advocacy’s Hate Crime Advocacy Service.\n\nTo help you make a decision about where to refer your client the HATE-ID app asks you a series of questions about why they have sought your help. If you register to the app and provide your email, the information you input into the app in answering the questions can be emailed to you for your own records. You will be asked to confirm that you have your client’s consent to collect their information.\n\nThis app will not make the referral for you but will provide a suggestion about which agency you should refer to and will provide a link to the agency’s referral form/information so that you can complete it with the information you’ve collected in this app."
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gothammedium"
+                android:textSize="15sp"
+                android:text="There are three steps to this app:\n\nStep 1: DEFINITIONS: Provides a definition for the range of harms your clients might be reporting\n\nStep 2: REFERRAL INFORMATION - Question to promt you to make the correct referral\n\nStep 3: REFERRAL PATHWAY SUGGESTION"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginBottom="20dp"
+                android:letterSpacing="0.01">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/bContinue"
+                android:layout_width="wrap_content"
+                android:minWidth="150dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="STEP 1: DEFINITIONS"
+                android:lineSpacingExtra="5dp"
+                android:letterSpacing="0.01"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:fontFamily="@font/gothammediumt"
+                android:background="@drawable/round_y_button"
+                android:layout_marginBottom="40dp">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:weightSum="10"
+        android:gravity="center"
+        android:background="@drawable/pruplebox"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+
+        <ImageButton
+            android:id="@+id/ibHomePage"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_page"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+
+        <ImageButton
+            android:id="@+id/ibDefinitions"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_open_svgrepo_com"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+
+        <ImageButton
+            android:id="@+id/ibForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/list_ul_svgrepo_com"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+
+        <ImageButton
+            android:id="@+id/ibAboutUs"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:background="@drawable/information_circle_solid_svgrepo_com"/>
+
+    </LinearLayout>
+</RelativeLayout>

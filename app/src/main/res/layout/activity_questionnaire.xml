@@ -16,12 +16,14 @@
 
         <ImageButton
             android:id="@+id/ibBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/purple"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
             android:src="@drawable/back_arrow"
             android:importantForAccessibility="no">
-
         </ImageButton>
     </LinearLayout>
 
@@ -256,7 +258,7 @@
                 android:fontFamily="@font/gothammedium"
                 android:layout_marginTop="40dp"
                 android:textSize="15sp"
-                android:text="Does the client live close to the person committing the offence?"
+                android:text="Does the client live next to the perpetrator?"
                 android:lineSpacingExtra="5dp"
                 android:letterSpacing="0.01"/>
 
@@ -452,7 +454,7 @@
                 android:textAllCaps="false"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Submit"
+                android:text="STEP 4: REFERAL PATHWAY SUGGESTION"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
@@ -464,17 +466,9 @@
     </ScrollView>
 
 
-    <LinearLayout
-        android:id="@+id/BottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/purple"
-        android:orientation="horizontal"
-        android:layout_gravity="center|bottom"
-        android:layout_alignParentBottom="true">
-    </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/BottomNav"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
@@ -485,27 +479,39 @@
         android:orientation="horizontal"
         android:baselineAligned="false">
 
+
         <ImageButton
-            android:id="@+id/ibBook"
+            android:id="@+id/ibHomePage"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/book_open_svgrepo_com"
-            android:contentDescription="Profile"/>
+            android:background="@drawable/home_page"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
         </View>
 
+
         <ImageButton
-            android:id="@+id/ibList"
+            android:id="@+id/ibDefinitions"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/book_open_svgrepo_com"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </View>
+
+
+        <ImageButton
+            android:id="@+id/ibForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/list_ul_svgrepo_com"
-            android:contentDescription="About Us"/>
-
+            android:background="@drawable/list_ul_svgrepo_com"/>
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -519,8 +525,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
-            android:background="@drawable/information_circle_solid_svgrepo_com"
-            android:contentDescription="Information"/>
+            android:background="@drawable/information_circle_solid_svgrepo_com"/>
+
     </LinearLayout>
 
 
